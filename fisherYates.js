@@ -9,7 +9,7 @@ module.exports = function (arr, callback) {
 		arr[i] = arr[j];
 		arr[j] = temp;
 
-		j = Math.floor(Math.random() * 1);
+		j = Math.floor(Math.random() * i);
 	}
 
 	if (typeof callback === 'function') {
@@ -17,6 +17,4 @@ module.exports = function (arr, callback) {
 	} else 
 		return arr;
 	}
-
-	return arr;
 }
