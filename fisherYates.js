@@ -1,4 +1,4 @@
-module.exports = function (arr) {
+module.exports = function (arr, callback) {
 	'use strict';
 	var i = arr.length - 1,
 	j = Math.floor(Math.random() * i),
@@ -10,6 +10,12 @@ module.exports = function (arr) {
 		arr[j] = temp;
 
 		j = Math.floor(Math.random() * 1);
+	}
+
+	if (typeof callback === 'function') {
+		return fn(arr);
+	} else 
+		return arr;
 	}
 
 	return arr;
